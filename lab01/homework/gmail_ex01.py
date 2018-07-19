@@ -18,8 +18,12 @@ from random import choice
 reason = choice(reasons)
 html_to_send = html_content.replace("{{em bị ốm}}",reason)
 from datetime import datetime
-now = datetime.now().hour
-while now >= 7:
-    msg = Message(' Đơn xin nghỉ học', to ='nguyenthilien07071999@gmail.com', html = html_to_send)
-    gmail.send(msg)
+# now = datetime.now().hour
+# print(now)
+while True:
+    now = datetime.now().hour
+    if 19>= now >= 7:
+        msg = Message(' Đơn xin nghỉ học', to ='nguyenthilien07071999@gmail.com', html = html_to_send)
+        gmail.send(msg)
+    # print(html_to_send)
     break
