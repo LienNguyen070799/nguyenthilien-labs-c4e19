@@ -1,14 +1,10 @@
-# x = int(input(""))
-# y = int(input(""))
-# width = int(input(" Chiều rộng hcn: "))
-# height = int(input(" Chiều dài hcn : "))
-# x2 = int(input(" Hoành độ điểm bắt đầu hcn : "))
-# y2 = int(input(" Tung độ điểm bắt đầu hcn : ")
-# diem = [x,y]
-# rectangle = [x2,y2,width,height]
-def is_inside(p = [x,y],re = [x2,y2,width, height]) :
-    if x2 <= x <= (x2+ width) and y2 <= y <= (y2 + height) :
-        return True
+
+def is_inside(p,re) :
+    if re[0] <= p[0] <= (re[0]+ re[2]) and re[1] <= p[1] <= (re[1] + re[3]) :
+        # p[0],p[1] là tọa độ x,y của điểm
+        # re[0],re[1] là tọa độ bắt đầu hình chữ nhật
+        # re[3],re[4] lần lượt là chiều rộng và chiều dài của hình chữ nhật
+        print(True)
     else :
-        return False
-is_inside([100,200],[60,240,50,100])
+        print(False)
+is_inside([100,200],[60,140,50,100])
