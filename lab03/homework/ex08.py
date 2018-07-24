@@ -1,10 +1,11 @@
 def remove_dollar_sign(s) :
-    l = list(s)
-    for i in range(len(l)) :
-        if '$' in l:
-            p = l.index("$")
-            del(l[p])
-    s = "".join(l)
+    s = s.replace("$","")
+    # l = list(s)
+    # for i in range(len(l)) :
+    #     if '$' in l:
+    #         p = l.index("$")
+    #         del(l[p])
+    # s = "".join(l)
     print(s)
     return s
 string_with_no_dollars = remove_dollar_sign("$80% percent of $life is to show $up")
